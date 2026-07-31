@@ -11,7 +11,7 @@
 const axios = require('axios');
 
 //➪ CONFIGURAÇÕES DE PROTEÇÃO E DESEMPENHO
-//➪ timeout: Tempo máximo de espera por resposta (30 segundos)
+//➪ timeout: Tempo máximo de espera por resposta 30 segundos
 //➪ maxTentativas: Quantas vezes tenta novamente se falhar
 //➪ atrasoTentativa: Tempo de espera entre cada tentativa em milissegundos
 const CONFIG = {
@@ -68,7 +68,7 @@ imagem: url }
 async function stickAi(texto) {
 return tentarExecutar(async () => {
 const prompt = encodeURIComponent(texto);
-//➪ Tamanho ideal + formato webp compatível com figurinhas
+//➪ Tamanho ideal ,formato webp compatível com figurinhas
 const url = `https://image.pollinations.ai/prompt/${prompt}?width=512&height=512&nologo=true&format=webp`;
 
 await axios.get(url, { headers: CABECALHOS, timeout: CONFIG.timeout });
@@ -80,6 +80,6 @@ imagem: [url] };
 });
 }
 
-//➪ EXPORTA AS FUNÇÕES PARA USAR NAS ROTAS DA API
+//➪ Exporta As Funções Para Usar Nas Rotas Da Api
 module.exports = { imagemAi, stickAi };
 
