@@ -9,7 +9,7 @@ global.Raiz_Tech = process.cwd();
 ⊰᯽⊱┈────────❊╌────────┈⊰᯽⊱
 */
 //➪ Ajustar o caminho conforme o projeto 
-const caminhostreamImagem = path.join(Raiz_Tech, 'banco_dados', 'inteligencia_artificial',  'imagem');
+const caminhostreamImagem = path.join(Raiz_Tech, 'banco_dados', 'inteligencia_artificial',  'gerador');
 const { imagemAi, stickAi } = require(caminhostreamImagem);
 
 //➪ Inteligência Stick AI
